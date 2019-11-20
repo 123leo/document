@@ -1,0 +1,12 @@
+package com.sishuok.fd6.mes.messagetrans.chain;
+
+import com.sishuok.fd6.mes.messagetrans.vo.MsgVO;
+
+public abstract class MsgExecuteHandler {
+	private MsgExecuteHandler nextHandler;
+	public MsgExecuteHandler(MsgExecuteHandler nextHandler){
+		this.nextHandler = nextHandler;
+	}
+	
+	public abstract String handlerRequest(MsgVO vo);
+}

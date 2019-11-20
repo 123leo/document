@@ -1,0 +1,10 @@
+package com.sishuok.fd8.permitmgr.dispatch.permit;
+
+import java.util.List;
+
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermit;
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+
+public class PermitService implements IPermit{
+
+}

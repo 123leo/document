@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fd8-2/src/com/sishuok/fd8/permitmgr/myspiimpl&apos; to &apos;sishuokspiimpl&apos;" description="Rename resource &apos;myspiimpl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/sishuok/fd8/permitmgr/myspiimpl" name="sishuokspiimpl" stamp="1386129753843" updateReferences="true"/>
+</session>

@@ -1,0 +1,8 @@
+package com.sishuok.fd6.mes.messagetrans.chain;
+
+public class MsgExecuteHandler {
+	private MsgExecuteHandler nextHandler;
+	public MsgExecuteHandler(MsgExecuteHandler nextHandler){
+		this.nextHandler = nextHandler;
+	}
+}

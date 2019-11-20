@@ -1,0 +1,20 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+import com.sishuok.fd8.permitmgr.spi.SPIFactory;
+import com.sishuok.fd8.permitmgr.spi.validate.ValidateSPI;
+
+public class PermitExpression extends AbstractExpression{
+	private String expression = "";
+	public PermitExpression(String expression, AbstractExpression ae) {
+		super(ae);
+		this.expression = expression;
+	}
+	public boolean interpret(Context ctx){
+		//1£º
+		String perName = this.expression.substring("P:".length());
+		//2:
+		ValidateSPI v = new SPIFactory().createSPIAbstractFactory().createValidateSPI();
+		
+		return super.interpret(ctx);
+	}
+}

@@ -1,0 +1,10 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+public class WaitExecuteState implements State{
+
+	@Override
+	public void handler(Context ctx) {
+		//这里问题：不知道具体是什么消息，也不知道应该如何处理， State只是用来控制基本的流程
+	}
+
+}

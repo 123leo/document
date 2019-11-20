@@ -1,0 +1,26 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+public class Context {
+	private String expression;
+	private String finalExpression;
+	private int userId;
+	private String resourcePath;
+	
+	public Context(String expression,int userId, String resourcePath){
+		this.expression = expression;
+		this.userId = userId;
+		this.resourcePath = resourcePath;
+	}
+
+	public String getFinalExpression() {
+		return finalExpression;
+	}
+
+	public void setFinalExpression(String finalExpression) {
+		this.finalExpression = finalExpression;
+	}
+
+	public String getExpression() {
+		return expression;
+	}	
+}

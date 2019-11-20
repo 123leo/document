@@ -1,0 +1,77 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+public class SishuokDispatchDAOImpl<M> extends DispatchDAOImpl<M>{
+
+	@Override
+	protected boolean judgeCondition(M m, M model) {
+		String name = m.getClass().getName();
+		System.out.println("name==="+name);
+		
+		if(name.contains("PermitModel")){
+			return judgePermitName(m,model);
+		}else if(name.contains("RoleModel")){
+			return judgeRoleVerifyName(m,model);
+		}else if(name.contains("ResourceModel")){
+			return judgeResourcePath(m,model);
+		}else if(name.contains("ResourcePermitModel")){
+			return judgeResourcePermit(m,model);
+		}
+		
+		
+		
+		return false;
+	}
+	private boolean hasValue(M m,M model,String str){
+		int nameSite1 = m.toString().indexOf(str)+str.length();
+		int nameSite2 = nameSite1 + m.toString().substring(nameSite1).indexOf(",");
+		String name = m.toString().substring(nameSite1,nameSite2);
+		
+		if(model.toString().contains("path="+name)){
+			return true;
+		}
+		return false;
+	}
+	private boolean judgeResourcePermit(M m, M model){
+		String name = this.value(m, "path=")
+		
+		if(model.toString().contains("path="+name)){
+			return true;
+		}
+		
+		return false;
+	}
+	private boolean judgeResourcePath(M m, M model){
+		int nameSite1 = m.toString().indexOf("path=")+"path=".length();
+		int nameSite2 = nameSite1 + m.toString().substring(nameSite1).indexOf(",");
+		String name = m.toString().substring(nameSite1,nameSite2);
+		
+		if(model.toString().contains("path="+name)){
+			return true;
+		}
+		
+		return false;
+	}
+	private boolean judgeRoleVerifyName(M m, M model){
+		int nameSite1 = m.toString().indexOf("verifyName=")+"verifyName=".length();
+		int nameSite2 = nameSite1 + m.toString().substring(nameSite1).indexOf(",");
+		String name = m.toString().substring(nameSite1,nameSite2);
+		
+		if(model.toString().contains("verifyName="+name)){
+			return true;
+		}
+		
+		return false;
+	}
+	private boolean judgePermitName(M m, M model){
+		int nameSite1 = m.toString().indexOf("name=")+"name=".length();
+		int nameSite2 = m.toString().indexOf("]");
+		String name = m.toString().substring(nameSite1,nameSite2);
+		
+		if(model.toString().contains("name="+name)){
+			return true;
+		}
+		
+		return false;
+	}
+
+}

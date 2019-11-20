@@ -1,0 +1,10 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class ResourceModel implements java.io.Serializable{
+	private int id;
+	private String path;
+	private String name;
+	private String description;
+	
+	
+}

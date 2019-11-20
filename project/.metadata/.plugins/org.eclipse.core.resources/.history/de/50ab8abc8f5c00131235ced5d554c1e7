@@ -1,0 +1,28 @@
+package com.sishuok.fd8.permitmgr.validate;
+
+import java.util.List;
+
+public interface IValidate {
+	public boolean hasPermit(int userId,String resourcePath,String permitName);
+	
+	public boolean hasPermit(int userId,String resourcePath,List<String> permitNames);
+	
+	public boolean isRole(int userId,String roleVerifyName);
+	
+	/**
+	 * 外观方法，一次性的解决几乎所有的验证需求
+	 * @param userId
+	 * @param resourcePath
+	 * @param expr 要验证的权限组合的表达式
+	 * @return
+	 */
+	
+	// P:p1 || (P:p2 && P:p3))
+	// R:r1 || (P:p1 || (P:p2 && P:p3))
+	//1：使用Java的基本表达式的语法，只支持  && 、 || 、 !
+	//2：在权限名称前加 P：， 在角色名称前加 R：
+	public boolean hasPermitByExpr(int userId,String resourcePath,String expr);
+	
+	
+	
+}

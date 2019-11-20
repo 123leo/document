@@ -1,0 +1,21 @@
+package com.sishuok.fd6.mes.business.state;
+
+public class WaitAnalyzeState implements State{
+
+	@Override
+	public void handler(Context ctx) {
+		String msg = ctx.getMsg();
+		
+		String[] ss = msg.split(":");
+		String msgType = ss[0];
+		
+		ss = ss[1].split(",");
+		String l2Id = ss[0];
+		
+		if(ss[1]!=null && ss[1].trim().length()>0){
+			ss = ss[1].split("\|");
+		}
+		
+	}
+
+}

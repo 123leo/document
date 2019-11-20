@@ -1,0 +1,8 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class RoleModel implements java.io.Serializable{
+	private int id;
+	private String verifyName;
+	private String name;
+	
+}

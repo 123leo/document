@@ -1,0 +1,8 @@
+package com.sishuok.fd8.permitmgr.spi;
+
+public class SPIFactory<M> {
+	public SPIAbstractFactory createSPIAbstractFactory(){
+		
+		return null;
+	}
+}

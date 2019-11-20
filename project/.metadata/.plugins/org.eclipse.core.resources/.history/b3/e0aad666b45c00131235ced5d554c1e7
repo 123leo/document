@@ -1,0 +1,11 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+public abstract class AbstractExpression {
+	private AbstractExpression ae = null;
+	
+	public AbstractExpression(AbstractExpression ae){
+		this.ae = ae;
+	}
+	public abstract void interpret(Context ctx);
+
+}

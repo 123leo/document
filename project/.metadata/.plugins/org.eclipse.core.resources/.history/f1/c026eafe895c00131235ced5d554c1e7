@@ -1,0 +1,17 @@
+package com.sishuok.fd8.permitmgr.dispatch;
+
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermit;
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermitDispatch;
+
+public class DispatchFactory {
+	private DispatchFactory(){}
+	
+	public static IPermit createIPermit(){
+		return null;
+	}
+	public static IPermitDispatch createIPermitDispatch(){
+		return null;
+	}
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+public interface State {
+	public void handler(Context ctx);
+}

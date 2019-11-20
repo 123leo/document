@@ -1,0 +1,54 @@
+package com.sishuok;
+
+import com.sishuok.db.MapDB;
+import com.sishuok.fd2.warehouse.Grid;
+import com.sishuok.fd2.warehouse.WareHouse;
+
+public class Client {
+	public static void main(String[] args) {
+		//创建 仓库、库区、堆位的对象，然后把这些数据存放到MapDB
+		WareHouse wh1 = new WareHouse();
+		wh1.setId(1);
+		wh1.setName("仓库1");
+		wh1.setpId(-1);
+		wh1.setType(1);		
+		MapDB.getMapDB().put(wh1.getId(), wh1);
+		
+		WareHouse a1 = new WareHouse();
+		a1.setId(11);
+		a1.setName("库区1");
+		a1.setpId(1);
+		a1.setType(2);
+		MapDB.getMapDB().put(a1.getId(), a1);
+
+		WareHouse a2 = new WareHouse();
+		a2.setId(12);
+		a2.setName("库区2");
+		a2.setpId(1);
+		a2.setType(2);
+		MapDB.getMapDB().put(a2.getId(), a2);
+		
+		WareHouse a3 = new WareHouse();
+		a3.setId(13);
+		a3.setName("库区3");
+		a3.setpId(11);
+		a3.setType(2);
+		MapDB.getMapDB().put(a3.getId(), a3);
+		
+		
+		Grid g1 = new Grid();
+		g1.setId(1);
+		g1.setDesc("格子1");
+		g1.setpId(11);
+
+		
+		
+	}
+	
+	private static void printMapDB(String str){
+		System.out.println(str+"================================");
+		for(Object key : MapDB.getMapDB().keySet()){
+			System.err.println("key="+key+" , value="+MapDB.getMapDB().get(key));
+		}
+	}
+}

@@ -1,0 +1,5 @@
+package com.sishuok.fd8.permitmgr.dispatch.permit;
+
+public class PermitService {
+
+}

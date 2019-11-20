@@ -1,0 +1,20 @@
+package com.sishuok.fd6.mes.messagetrans.chain;
+
+public class FM003Handler extends MsgExecuteHandler{
+
+	public FM003Handler(MsgExecuteHandler nextHandler) {
+		super(nextHandler);
+	}
+
+	@Override
+	public String handlerRequest(ChainVO vo) {
+		//1：判断类型
+		//2：调用ps系统，可能会比较复杂
+		//3：
+		//4：
+		//5：
+		
+		
+		return null;
+	}
+}

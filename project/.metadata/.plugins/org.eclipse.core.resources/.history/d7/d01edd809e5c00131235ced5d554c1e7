@@ -1,0 +1,20 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+public class SishuokDispatchDAOImpl<M> extends DispatchDAOImpl<M>{
+
+	@Override
+	protected boolean judgeCondition(M m, M model) {
+		String name = m.getClass().getName();
+		System.out.println("name==="+name);
+		
+		if(name.contains("PermitModel")){
+			return judgePermitName(m,model);
+		}
+		
+		return true;
+	}
+	private boolean judgePermitName(M m, M model){
+		return true;
+	}
+
+}

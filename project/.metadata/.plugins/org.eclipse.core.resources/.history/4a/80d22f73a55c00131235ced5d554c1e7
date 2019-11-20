@@ -1,0 +1,62 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+import java.util.List;
+
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+import com.sishuok.fd8.permitmgr.dispatch.vo.ResourceModel;
+import com.sishuok.fd8.permitmgr.spi.validate.ValidateSPI;
+
+public class SishuokValidateSPIImpl implements ValidateSPI{
+
+	@Override
+	public int getResourceIdByPath(String resourcePath) {
+		SishuokDispatchDAOImpl impl = new SishuokDispatchDAOImpl<ResourceModel>();
+		ResourceModel rm = new ResourceModel();
+		rm.setPath(resourcePath);
+		 
+		List<ResourceModel> list = impl.getByCondition(rm,0,0);
+		
+		if(list!=null && list.size()>0){
+			ResourceModel resourceModel = list.get(0);
+			return resourceModel.getId();
+		}
+		
+		return 0;
+	}
+
+	@Override
+	public int getPermitIdByName(String permitName) {
+		SishuokDispatchDAOImpl impl = new SishuokDispatchDAOImpl<PermitModel>();
+		PermitModel pm = new PermitModel();
+		pm.setName(permitName);
+		 
+		List<PermitModel> list = impl.getByCondition(pm,0,0);
+		
+		if(list!=null && list.size()>0){
+			ResourceModel resourceModel = list.get(0);
+			return resourceModel.getId();
+		}
+		return 0;
+	}
+
+	@Override
+	public int getRPIdByResIdAndPerId(int resId, int perId) {
+		return 0;
+	}
+
+	@Override
+	public int judgeUserPermit(int userId, int resAndPerId) {
+		return 0;
+	}
+
+	@Override
+	public int getRoleIdByVerifyName(String verifyName) {
+		return 0;
+	}
+
+	@Override
+	public int judgeUserRole(int userId, int roleId) {
+		return 0;
+	}
+
+}

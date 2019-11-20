@@ -1,0 +1,31 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class RoleModel implements java.io.Serializable{
+	private int id;
+	private String verifyName;
+	private String name;
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	String getVerifyName() {
+		return verifyName;
+	}
+	void setVerifyName(String verifyName) {
+		this.verifyName = verifyName;
+	}
+	String getName() {
+		return name;
+	}
+	void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "RoleModel [id=" + id + ", verifyName=" + verifyName + ", name="
+				+ name + "]";
+	}
+	
+}

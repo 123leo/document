@@ -1,0 +1,5 @@
+package com.sishuok.fd6.mes.messagetrans.command;
+
+public interface Command {
+	public String execute(MsgVO vo);
+}

@@ -1,0 +1,13 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+public class Context {
+	private String msg = "";
+	
+	private String msgType = "";
+	private String l2Id = "";
+	private List<String> pids = new ArrayList<String>();
+	
+	public String request(String msg){
+		return null;
+	}
+}

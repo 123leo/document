@@ -1,0 +1,42 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Context {
+	private String msg = "";
+	
+	private String msgType = "";
+	private String l2Id = "";
+	private List<String> pids = new ArrayList<String>();
+	
+	
+	String getMsg() {
+		return msg;
+	}
+	void setMsg(String msg) {
+		this.msg = msg;
+	}
+	String getMsgType() {
+		return msgType;
+	}
+	void setMsgType(String msgType) {
+		this.msgType = msgType;
+	}
+	String getL2Id() {
+		return l2Id;
+	}
+	void setL2Id(String l2Id) {
+		this.l2Id = l2Id;
+	}
+	List<String> getPids() {
+		return pids;
+	}
+	void setPids(List<String> pids) {
+		this.pids = pids;
+	}
+
+	public String request(String msg){
+		return null;
+	}
+}

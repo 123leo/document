@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;fd5-1/src/uuid2&apos; to &apos;uuid3&apos;" description="Rename resource &apos;uuid2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/uuid2" name="uuid3" stamp="1383724041859" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;fd5-1/src/com/sishuok/fd5/uuid3/Uuid2Factory.java&apos; to &apos;Uuid3Factory.java&apos;" description="Rename resource &apos;Uuid2Factory.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/sishuok/fd5/uuid3/Uuid2Factory.java" name="Uuid3Factory.java" stamp="1383724082531" updateReferences="true"/>
+</session>

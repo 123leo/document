@@ -1,0 +1,51 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+import com.sishuok.fd8.permitmgr.spi.validate.ValidateSPI;
+import com.sishuok.fd8.permitmgr.validate.ValidateService;
+
+public class Context {
+	private String expression;
+	private String finalExpression;
+	private int userId;
+	private String resourcePath;
+	private ValidateService vs = null;
+	
+	public Context(ValidateService vs,int userId, String resourcePath,String expression){
+		this.expression = expression;
+		this.userId = userId;
+		this.resourcePath = resourcePath;
+		this.v = v;
+	}
+	
+	
+	
+	public ValidateService getV() {
+		return v;
+	}
+
+
+
+	public int getUserId() {
+		return userId;
+	}
+
+
+
+	public String getResourcePath() {
+		return resourcePath;
+	}
+
+
+
+	public String getFinalExpression() {
+		return finalExpression;
+	}
+
+	public void setFinalExpression(String finalExpression) {
+		this.finalExpression = finalExpression;
+	}
+
+	public String getExpression() {
+		return expression;
+	}	
+}

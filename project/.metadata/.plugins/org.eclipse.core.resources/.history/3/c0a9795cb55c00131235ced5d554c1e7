@@ -1,0 +1,15 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+public class PermitExpression extends AbstractExpression{
+	private String expression = "";
+	public PermitExpression(String expression, AbstractExpression ae) {
+		super(ae);
+		this.expression = expression;
+	}
+	public boolean interpret(Context ctx){
+		//1£º
+		String perName = this.expression.substring("P:".length());
+		
+		return super.interpret(ctx);
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.sishuok.fd3.cost.Cost&apos; to &apos;CostService&apos;&#x0D;&#x0A;- Original project: &apos;fd3-2&apos;&#x0D;&#x0A;- Original element: &apos;com.sishuok.fd3.cost.Cost&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sishuok.fd3.cost.CostService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Cost&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.sishuok.fd3.cost{Cost.java[Cost" matchStrategy="1" name="CostService" qualified="false" references="true" similarDeclarations="false" stamp="1383631396453" textual="false" version="1.0"/>
+</session>

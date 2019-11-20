@@ -1,0 +1,9 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+public class Context {
+	private String msg = "";
+	
+	public String request(String msg){
+		return null;
+	}
+}

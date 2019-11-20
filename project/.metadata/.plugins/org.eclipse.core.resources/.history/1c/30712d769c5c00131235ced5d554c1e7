@@ -1,0 +1,11 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+public class SishuokDispatchDAOImpl<M> extends DispatchDAOImpl<M>{
+
+	@Override
+	protected boolean judgeCondition(M m, M model) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

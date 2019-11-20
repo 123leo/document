@@ -1,0 +1,91 @@
+package com.sishuok.fd8.permitmgr.validate;
+
+import java.util.List;
+
+import com.sishuok.fd8.permitmgr.spi.SPIFactory;
+import com.sishuok.fd8.permitmgr.spi.validate.ValidateSPI;
+
+public class ValidateService implements IValidate{
+	private ValidateSPI v = new SPIFactory().createSPIAbstractFactory().createValidateSPI();
+	@Override
+	public boolean hasPermit(int userId, String resourcePath, String permitName) {
+		//1：resourcePath---resource Id
+		int resId = v.getResourceIdByPath(resourcePath);
+		//2: permitName ---- permit Id
+		int perId = v.getPermitIdByName(permitName);
+		//3：resource Id + permit Id ==〉ResourcePermit Id
+		int rpId = v.getRPIdByResIdAndPerId(resId, perId);
+		//4：userId  + ResourcePermit Id--> 结果
+		int pdm = v.judgeUserPermit(userId, rpId);
+		
+		if(pdm>0){
+			return true;
+		}		
+		
+		return false;
+	}
+
+	@Override
+	public boolean hasPermitAnd(int userId, String resourcePath,
+			List<String> permitNames) {
+		
+		for(String permitName : permitNames){
+			if(!this.hasPermit(userId, resourcePath, permitName)){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+	@Override
+	public boolean hasPermitOR(int userId, String resourcePath,
+			List<String> permitNames) {
+		for(String permitName : permitNames){
+			if(this.hasPermit(userId, resourcePath, permitName)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean isRole(int userId, String roleVerifyName) {
+		int roleId = v.getRoleIdByVerifyName(roleVerifyName);
+		
+		int value = v.judgeUserRole(userId, roleId);
+		
+		if(value > 0){
+			return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public boolean isRole(int userId, List<String> roleVerifyNames) {
+		for(String roleVerifyName : roleVerifyNames){
+			if(this.isRole(userId, roleVerifyName)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean hasPermitByExpr(int userId, String resourcePath, String expr) {
+		//构造抽象语法树
+		String str = expr;
+		str = str.replace("(","");
+		str = str.replace(")","");
+		str = str.replace("&&","");
+		str = str.replace("||","");
+		str = str.replace("!","");
+		
+		System.out.println("str="+str);
+		
+		
+		
+		return false;
+	}
+}

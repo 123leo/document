@@ -1,0 +1,11 @@
+package com.sishuok.fd6.mes.messagetrans.state;
+
+public class WaitExecuteState implements State{
+
+	@Override
+	public void handler(Context ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

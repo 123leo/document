@@ -1,0 +1,5 @@
+package com.sishuok.fd8.permitmgr.spi.validate;
+
+public interface ValidateSPI {
+
+}

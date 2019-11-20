@@ -1,0 +1,32 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class UserRoleModel implements java.io.Serializable{
+	private int id;
+	private int userId;
+	private int roleId;
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	int getUserId() {
+		return userId;
+	}
+	void setUserId(int userId) {
+		this.userId = userId;
+	}
+	int getRoleId() {
+		return roleId;
+	}
+	void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
+	@Override
+	public String toString() {
+		return "UserRoleModel [id=" + id + ", userId=" + userId + ", roleId="
+				+ roleId + "]";
+	}
+	
+	
+}

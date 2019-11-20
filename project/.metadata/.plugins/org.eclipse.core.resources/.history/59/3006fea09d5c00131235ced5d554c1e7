@@ -1,0 +1,30 @@
+package com.sishuok.fd8;
+
+import javax.script.ScriptException;
+
+import com.sishuok.fd8.permitmgr.dispatch.DispatchFactory;
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermit;
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+
+public class Client {
+	public static void main(String[] args) throws ScriptException {
+//		boolean f = "true || (false || (true && false))";
+		
+		//BeanShell
+		//JRuby , JPython .....
+		
+		//js ÒýÇæ
+		
+//		ScriptEngine se = new ScriptEngineManager().getEngineByName("JavaScript");
+//		Object f = se.eval("true || (false || (true && false))");
+//		System.out.println(f);
+		
+		
+		IPermit ip = DispatchFactory.createIPermit();
+		PermitModel pm = new PermitModel();
+		pm.setId(1);
+		
+		
+		ip.create(pm);
+	}
+}

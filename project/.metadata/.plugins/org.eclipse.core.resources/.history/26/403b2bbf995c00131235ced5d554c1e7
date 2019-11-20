@@ -1,0 +1,41 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sishuok.fd8.permitmgr.sishuokspiimpl.db.MapDB;
+import com.sishuok.fd8.permitmgr.spi.dispatch.DispatchDAO;
+
+public class DispatchDAOImpl<M> implements DispatchDAO<M>{
+
+	@Override
+	public void create(M m) {
+		String key = m.getClass().getName();
+		List<M> list = new ArrayList<M>();
+		Object obj = MapDB.getMapDB().get(key);
+		if(obj!=null){
+			list = (List<M>)obj;
+		}		
+		MapDB.getMapDB().put(key, list.add(m));
+	}
+
+	@Override
+	public void update(M m) {
+		
+	}
+
+	@Override
+	public void delete(M m) {
+		
+	}
+
+	@Override
+	public M getById(int id) {
+		return null;
+	}
+
+	@Override
+	public List<M> getByCondition(M m, int begin, int pageSize) {
+		return null;
+	}
+}

@@ -1,0 +1,23 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class PermitModel implements java.io.Serializable{
+	private int id;
+	private String name;
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	String getName() {
+		return name;
+	}
+	void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "PermitModel [id=" + id + ", name=" + name + "]";
+	}
+	
+}

@@ -1,0 +1,11 @@
+package com.sishuok.fd6.mes.messagetrans.chain;
+
+public class FM003Handler extends MsgExecuteHandler{
+
+	@Override
+	public String handlerRequest(ChainVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

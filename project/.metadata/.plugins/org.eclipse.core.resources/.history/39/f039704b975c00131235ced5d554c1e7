@@ -1,0 +1,9 @@
+package com.sishuok.fd8.permitmgr.dispatch.userrole;
+
+import com.sishuok.fd8.permitmgr.dispatch.api.IUserRole;
+import com.sishuok.fd8.permitmgr.dispatch.base.BaseService;
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+
+public class UserRoleService extends BaseService<PermitModel> implements IUserRole{
+
+}

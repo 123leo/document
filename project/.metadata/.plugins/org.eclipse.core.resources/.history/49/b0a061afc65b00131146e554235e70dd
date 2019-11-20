@@ -1,0 +1,10 @@
+package com.sishuok.fd6.mes.messagetrans.command;
+
+import com.sishuok.fd6.mes.messagetrans.vo.MsgVO;
+
+public class Invoker {
+	public String runCommand(MsgVO vo){
+		
+		return "";
+	}
+}

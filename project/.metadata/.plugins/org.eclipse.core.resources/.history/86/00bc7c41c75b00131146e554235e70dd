@@ -1,0 +1,13 @@
+package com.sishuok.fd6.mes.messagetrans.command;
+
+import com.sishuok.fd6.mes.messagetrans.vo.MsgVO;
+
+public class CallPDISCommand implements Command{
+
+	@Override
+	public String execute(MsgVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

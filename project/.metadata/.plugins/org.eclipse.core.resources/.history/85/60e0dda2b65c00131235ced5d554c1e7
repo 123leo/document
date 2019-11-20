@@ -1,0 +1,22 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+import com.sishuok.fd8.permitmgr.spi.SPIFactory;
+import com.sishuok.fd8.permitmgr.spi.validate.ValidateSPI;
+
+public class RoleExpression extends AbstractExpression{
+	private String expression = "";
+	public RoleExpression(String expression, AbstractExpression ae) {
+		super(ae);
+		this.expression = expression;
+	}
+	public boolean interpret(Context ctx){
+		//1£º
+		String roleVerifyName = this.expression.substring("R:".length());
+		//2:
+		boolean f = ctx.getVs().hasPermit(ctx.getUserId(), ctx.getResourcePath(), perName);
+		//3:
+		ctx.setExpression(ctx.getExpression().replace(expression, ""+f));
+		
+		return super.interpret(ctx);
+	}
+}

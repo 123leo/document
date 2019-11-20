@@ -1,0 +1,38 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class PermitDispatchModel implements java.io.Serializable{
+	private int id;
+	private int userOrRoleId;
+	private int type; //1-user,2-role
+	private int resourcePermitId;
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	int getUserOrRoleId() {
+		return userOrRoleId;
+	}
+	void setUserOrRoleId(int userOrRoleId) {
+		this.userOrRoleId = userOrRoleId;
+	}
+	int getType() {
+		return type;
+	}
+	void setType(int type) {
+		this.type = type;
+	}
+	int getResourcePermitId() {
+		return resourcePermitId;
+	}
+	void setResourcePermitId(int resourcePermitId) {
+		this.resourcePermitId = resourcePermitId;
+	}
+	@Override
+	public String toString() {
+		return "PermitDispatchModel [id=" + id + ", userOrRoleId="
+				+ userOrRoleId + ", type=" + type + ", resourcePermitId="
+				+ resourcePermitId + "]";
+	}
+}

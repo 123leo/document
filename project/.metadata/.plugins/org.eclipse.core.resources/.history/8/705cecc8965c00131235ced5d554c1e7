@@ -1,0 +1,41 @@
+package com.sishuok.fd8.permitmgr.dispatch.permit;
+
+import java.util.List;
+
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermit;
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+
+public class PermitService implements IPermit{
+
+	@Override
+	public void create(PermitModel m) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(PermitModel m) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(PermitModel m) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PermitModel getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PermitModel> getByCondition(PermitModel m, int begin,
+			int pageSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

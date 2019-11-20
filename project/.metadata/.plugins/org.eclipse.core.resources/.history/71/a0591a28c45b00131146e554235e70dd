@@ -1,0 +1,14 @@
+package com.sishuok.fd6.mes.messagetrans.chain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ChianVO {
+	private String msg = "";
+	private String msgType = "";
+	private String l2Id = "";
+	private List<String> pids = new ArrayList<String>();
+	
+	
+	
+}

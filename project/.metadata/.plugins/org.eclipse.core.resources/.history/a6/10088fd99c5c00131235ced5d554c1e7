@@ -1,0 +1,14 @@
+package com.sishuok.fd8.permitmgr.sishuokspiimpl;
+
+import com.sishuok.fd8.permitmgr.spi.SPIAbstractFactory;
+import com.sishuok.fd8.permitmgr.spi.dispatch.DispatchDAO;
+
+public class SishuokSPIAbstractFactory<M> implements SPIAbstractFactory<M>{
+
+	@Override
+	public DispatchDAO createDispatchDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

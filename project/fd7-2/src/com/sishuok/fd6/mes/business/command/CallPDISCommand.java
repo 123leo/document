@@ -1,0 +1,15 @@
+package com.sishuok.fd6.mes.business.command;
+
+import com.sishuok.fd6.mes.business.vo.MsgVO;
+
+public class CallPDISCommand implements Command{
+
+	@Override
+	public String execute(MsgVO vo) {
+		System.out.println("now call ps===="+vo);
+		
+		int a = (int)(1 + Math.random() * 10);
+		
+		return a+"|"+(a+1)+"|"+(a+2)+"|"+(a+3);
+	}
+}

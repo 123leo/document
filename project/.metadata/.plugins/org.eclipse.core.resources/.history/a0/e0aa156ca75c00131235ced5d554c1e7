@@ -1,0 +1,87 @@
+package com.sishuok.fd8;
+
+import java.util.List;
+
+import javax.script.ScriptException;
+
+import com.sishuok.fd8.permitmgr.dispatch.DispatchFactory;
+import com.sishuok.fd8.permitmgr.dispatch.api.IPermit;
+import com.sishuok.fd8.permitmgr.dispatch.api.IRole;
+import com.sishuok.fd8.permitmgr.dispatch.api.IUser;
+import com.sishuok.fd8.permitmgr.dispatch.vo.PermitModel;
+import com.sishuok.fd8.permitmgr.dispatch.vo.RoleModel;
+import com.sishuok.fd8.permitmgr.dispatch.vo.UserModel;
+
+public class Client {
+	public static void main(String[] args) throws ScriptException {
+//		boolean f = "true || (false || (true && false))";
+		
+		//BeanShell
+		//JRuby , JPython .....
+		
+		//js ÒýÇæ
+		
+//		ScriptEngine se = new ScriptEngineManager().getEngineByName("JavaScript");
+//		Object f = se.eval("true || (false || (true && false))");
+//		System.out.println(f);
+
+		IUser user = DispatchFactory.createIUser();
+		UserModel um1 = new UserModel();
+		um1.setId(1);
+		um1.setName("u1");
+		user.create(um1);
+		
+		UserModel um2 = new UserModel();
+		um2.setId(2);
+		um2.setName("u2");
+		user.create(um2);
+		
+		UserModel um3 = new UserModel();
+		um3.setId(3);
+		um3.setName("u3");
+		user.create(um3);
+		/////////////////////////////////////
+		IRole role = DispatchFactory.createIRole();
+		RoleModel rm1 = new RoleModel();
+		rm1.setId(11);
+		rm1.setName("r1");
+		rm1.setVerifyName("r1");
+		role.create(rm1);
+		
+		RoleModel rm2 = new RoleModel();
+		rm2.setId(12);
+		rm2.setName("r2");
+		rm2.setVerifyName("r2");
+		role.create(rm2);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		IPermit ip = DispatchFactory.createIPermit();
+		PermitModel pm = new PermitModel();
+		pm.setId(1);
+		pm.setName("p1");
+		
+		ip.create(pm);
+		
+		PermitModel pm2 = new PermitModel();
+		pm2.setId(2);
+		pm2.setName("p2");
+		
+		ip.create(pm2);
+		
+		List<PermitModel> list = ip.getByCondition(pm2, 1,10);
+		System.out.println("list=="+list);
+	}
+}

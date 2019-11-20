@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fd4-1/src/com/sishuok/fd4/uuid2/arithmatic/Arithmatic.java&apos; to &apos;IArithmatic.java&apos;" description="Rename resource &apos;Arithmatic.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/sishuok/fd4/uuid2/arithmatic/Arithmatic.java" name="IArithmatic.java" stamp="1383707429031" updateReferences="true"/>
+</session>

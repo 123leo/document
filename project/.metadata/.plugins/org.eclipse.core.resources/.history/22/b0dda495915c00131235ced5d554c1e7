@@ -1,0 +1,17 @@
+package com.sishuok.fd8;
+
+public class Client {
+	public static void main(String[] args) {
+//		boolean f = "true || (false || (true && false))";
+		
+		//BeanShell
+		//JRuby , JPython .....
+		
+		//js ÒýÇæ
+		
+		
+		
+		
+		System.out.println(f);
+	}
+}

@@ -1,0 +1,5 @@
+package com.sishuok.fd8.permitmgr.validate;
+
+public interface IValidate {
+
+}

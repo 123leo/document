@@ -1,0 +1,6 @@
+package com.sishuok.fd8.permitmgr.validate.expression;
+
+public abstract class AbstractExpression {
+	
+
+}

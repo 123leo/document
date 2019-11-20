@@ -1,0 +1,32 @@
+package com.sishuok.fd8.permitmgr.dispatch.vo;
+
+public class ResourcePermitModel implements java.io.Serializable{
+	private int id;
+	private int resourceId;
+	private int permitId;
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	int getResourceId() {
+		return resourceId;
+	}
+	void setResourceId(int resourceId) {
+		this.resourceId = resourceId;
+	}
+	int getPermitId() {
+		return permitId;
+	}
+	void setPermitId(int permitId) {
+		this.permitId = permitId;
+	}
+	@Override
+	public String toString() {
+		return "ResourcePermitModel [id=" + id + ", resourceId=" + resourceId
+				+ ", permitId=" + permitId + "]";
+	}
+	
+	
+}

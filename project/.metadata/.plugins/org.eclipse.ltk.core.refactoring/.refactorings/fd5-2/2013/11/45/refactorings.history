@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fd5-2/src/com/sishuok/fd4/uuid1/Uuid2Adapter.java&apos; to &apos;Uuid3Adapter.java&apos;" description="Rename resource &apos;Uuid2Adapter.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/sishuok/fd4/uuid1/Uuid2Adapter.java" name="Uuid3Adapter.java" stamp="1383730372359" updateReferences="true"/>
+</session>
